@@ -66,7 +66,10 @@ jobs:
         run: |
           rm -f ./.config*
           cp .x64 .config
-
+          
+      - name: SSH connection to Actions
+        uses: P3TERX/debugger-action@master
+        
       - name: Make download
         run: |
           make download -j8
